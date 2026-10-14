@@ -133,13 +133,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-// Emacs-style cursor movement: Ctrl + f/b/n/p/a/e
+// Emacs-style editing: Ctrl + f/b/n/p/a/e/d/h/j
 const key_override_t emacs_f = ko_make_basic(MOD_MASK_CTRL, KC_F, KC_RGHT);
 const key_override_t emacs_b = ko_make_basic(MOD_MASK_CTRL, KC_B, KC_LEFT);
 const key_override_t emacs_n = ko_make_basic(MOD_MASK_CTRL, KC_N, KC_DOWN);
 const key_override_t emacs_p = ko_make_basic(MOD_MASK_CTRL, KC_P, KC_UP);
 const key_override_t emacs_a = ko_make_basic(MOD_MASK_CTRL, KC_A, KC_HOME);
 const key_override_t emacs_e = ko_make_basic(MOD_MASK_CTRL, KC_E, KC_END);
+const key_override_t emacs_d = ko_make_basic(MOD_MASK_CTRL, KC_D, KC_DEL);
+const key_override_t emacs_h = ko_make_basic(MOD_MASK_CTRL, KC_H, KC_BSPC);
+const key_override_t emacs_j = ko_make_basic(MOD_MASK_CTRL, KC_J, KC_ENT);
 
 const key_override_t *key_overrides[] = {
     &emacs_f,
@@ -148,6 +151,9 @@ const key_override_t *key_overrides[] = {
     &emacs_p,
     &emacs_a,
     &emacs_e,
+    &emacs_d,
+    &emacs_h,
+    &emacs_j,
 };
 
 // Combo: press left + right mouse buttons together
